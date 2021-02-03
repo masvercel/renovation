@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Kitchen Extension Design
+    </title>
+    <style>:root{--border-radius:5px;--box-shadow:2px 2px 10px;--color:#118bee;--color-accent:#118bee15;--color-bg:#fff;--color-bg-secondary:#e9e9e9;--color-secondary:#0645AD;--color-secondary-accent:#920de90b;--color-shadow:#f4f4f4;--color-text:#000;--color-text-secondary:#999;--font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;--hover-brightness:1.2;--justify-important:center;--justify-normal:left;--line-height:1.5;--width-card:285px;--width-card-medium:460px;--width-card-wide:800px;--width-content:1080px}article aside{background:var(--color-secondary-accent);border-left:4px solid var(--color-secondary);padding:.01rem .8rem}body{background:var(--color-bg);color:var(--color-text);font-family:var(--font-family);line-height:var(--line-height);margin:0;overflow-x:hidden;padding:1rem 0}footer,header,main{margin:0 auto;max-width:var(--width-content);padding:0rem 1rem}hr{background-color:var(--color-bg-secondary);border:none;height:1px;margin:4rem 0}section{display:flex;flex-wrap:wrap;justify-content:var(--justify-important)}section aside{border:1px solid var(--color-bg-secondary);border-radius:var(--border-radius);box-shadow:var(--box-shadow) var(--color-shadow);margin:1rem;padding:1.25rem;width:var(--width-card)}section aside:hover{box-shadow:var(--box-shadow) var(--color-bg-secondary)}section aside img{max-width:100%}[hidden]{display:none}article header,div header,main header{padding-top:0}header{text-align:var(--justify-important)}header a b,header a em,header a i,header a strong{margin-left:.5rem;margin-right:.5rem}header nav img{margin:1rem 0}section header{padding-top:0;width:100%}nav{align-items:center;display:flex;font-weight:700;justify-content:space-between;margin-bottom:7rem}nav ul{list-style:none;padding:0}nav ul li{display:inline-block;margin:0 .5rem;position:relative;text-align:left}nav ul li:hover ul{display:block}nav ul li ul{background:var(--color-bg);border:1px solid var(--color-bg-secondary);border-radius:var(--border-radius);box-shadow:var(--box-shadow) var(--color-shadow);display:none;height:auto;left:-2px;padding:.5rem 1rem;position:absolute;top:1.7rem;white-space:nowrap;width:auto}nav ul li ul li,nav ul li ul li a{display:block}code,samp{background-color:var(--color-accent);border-radius:var(--border-radius);color:var(--color-text);display:inline-block;margin:0 .1rem;padding:0 .5rem}details{margin:1.3rem 0}details summary{font-weight:700;cursor:pointer}h1,h2,h3,h4,h5,h6{line-height:var(--line-height)}mark{padding:.1rem}ol li,ul li{padding:.2rem 0}p{margin:.75rem 0;padding:0}pre{margin:1rem 0;max-width:var(--width-card-wide);padding:1rem 0}pre code,pre samp{display:block;max-width:var(--width-card-wide);padding:.5rem 2rem;white-space:pre-wrap}small{color:var(--color-text-secondary)}sup{background-color:var(--color-secondary);border-radius:var(--border-radius);color:var(--color-bg);font-size:xx-small;font-weight:700;margin:.2rem;padding:.2rem .3rem;position:relative;top:-2px}a{color:var(--color-secondary);display:inline-block;text-decoration:none}a:hover{filter:brightness(var(--hover-brightness));text-decoration:underline}a b,a em,a i,a strong,button{border-radius:var(--border-radius);display:inline-block;font-size:medium;font-weight:700;line-height:var(--line-height);margin:.5rem 0;padding:1rem 2rem}button{font-family:var(--font-family)}button:hover{cursor:pointer;filter:brightness(var(--hover-brightness))}a b,a strong,button{background-color:var(--color);border:2px solid var(--color);color:var(--color-bg)}a em,a i{border:2px solid var(--color);border-radius:var(--border-radius);color:var(--color);display:inline-block;padding:1rem}figure{margin:0;padding:0}figure img{max-width:100%}figure figcaption{color:var(--color-text-secondary)}button:disabled,input:disabled{background:var(--color-bg-secondary);border-color:var(--color-bg-secondary);color:var(--color-text-secondary);cursor:not-allowed}button[disabled]:hover{filter:none}form{border:1px solid var(--color-bg-secondary);border-radius:var(--border-radius);box-shadow:var(--box-shadow) var(--color-shadow);display:block;max-width:var(--width-card-wide);min-width:var(--width-card);padding:1.5rem;text-align:var(--justify-normal)}form header{margin:1.5rem 0;padding:1.5rem 0}input,label,select,textarea{display:block;font-size:inherit;max-width:var(--width-card-wide)}input[type=checkbox],input[type=radio]{display:inline-block}input[type=checkbox]+label,input[type=radio]+label{display:inline-block;font-weight:400;position:relative;top:1px}input,select,textarea{border:1px solid var(--color-bg-secondary);border-radius:var(--border-radius);margin-bottom:1rem;padding:.4rem .8rem}input[readonly],textarea[readonly]{background-color:var(--color-bg-secondary)}label{font-weight:700;margin-bottom:.2rem}table{border:1px solid var(--color-bg-secondary);border-radius:var(--border-radius);border-spacing:0;display:inline-block;max-width:100%;overflow-x:auto;padding:0;white-space:nowrap}table td,table th,table tr{padding:.4rem .8rem;text-align:var(--justify-important)}table thead{background-color:var(--color);border-collapse:collapse;border-radius:var(--border-radius);color:var(--color-bg);margin:0;padding:0}table thead th:first-child{border-top-left-radius:var(--border-radius)}table thead th:last-child{border-top-right-radius:var(--border-radius)}table thead th:first-child,table tr td:first-child{text-align:var(--justify-normal)}table tr:nth-child(even){background-color:var(--color-accent)}blockquote{display:block;font-size:x-large;line-height:var(--line-height);margin:1rem auto;max-width:var(--width-card-medium);padding:1.5rem 1rem;text-align:var(--justify-important)}blockquote footer{color:var(--color-text-secondary);display:block;font-size:small;line-height:var(--line-height);padding:1.5rem 0} article{padding: 1.25rem;}.v-cover{height: 480px; object-fit: cover;width: 100vw;cursor: pointer;}.v-image{height: 250px; object-fit: cover;width: 100vw;cursor: pointer;}.dwn-cover{max-height: 460px; object-fit: cover;}.w-100{width: 100vw}.search-box{color:#333;background-color:#f5f5f5;width:85%;height:50px;padding:0 20px;border:none;border-radius:20px;outline:0;border:1px solid #002cd92e}.search-box:active,.search-box:focus,.search-box:hover{border:1px solid #d9008e}
+</style>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "Dayane"
+  },
+  "headline": "Kitchen Extension Design",
+  "datePublished": "2021-02-03",
+  "image": "https://i.pinimg.com/originals/1b/c8/ed/1bc8eda1fe7db96c5fb93114970d114f.jpg",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Shuriken MOD",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=kitchen+extension+design",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+	<!-- Head tag Code --></head>
+<body>
+    <header>
+        <h1>
+            <a href="/">
+            Kitchen Extension Design
+            </a>
+        </h1>
+        <p>
+                            Best image references website
+                    </p>
+        <center>
+            <input class='search-box' id="search-box" placeholder='Search and hit enter..' type='text' name="q" required autocomplete="off" id="search-query">
+            <div class="d-block p-4">
+	<center>
+		<!-- TOP BANNER ADS -->
+	</center>
+</div>        </center>
+    </header>
+    <main>
+        <article>
+    <p><strong>Kitchen Extension Design</strong>. The section of garden to the side of the kitchen is called the side-return and can be utilised to create a kitchen the full width of the property. Planning a realistic kitchen extension timeline can help to visualise the project and make sure every aspect of it is being taken care of to avoid any inconvenience further down the line.</p>
+            <figure>
+        <img class="v-cover ads-img" src="https://loveincorporated.blob.core.windows.net/contentimages/gallery/9744bd14-60c9-43de-8ded-3107bb762a74-velux_green_kit_ext.jpg" alt="Beautiful Ideas For Kitchen Extensions Loveproperty Com" style="width: 100%; padding: 5px; background-color: grey;"  onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHiFRow4epm-WiJKfkw4cu5nptcihX0lxv9Q';">
+        <figcaption>Beautiful Ideas For Kitchen Extensions Loveproperty Com from www.loveproperty.com</figcaption>
+    </figure>
+        <p>
+        Two of the most popular types of extensions for kitchens are side return and rear kitchen extensions. Bespoke designs and planning. In this space which lacks conventional windows roof lights bring drama and atmosphere to the table.
+    </p>
+    <h3>Smallbone of Devizes An orangery-style extension has more solid walls than a glass-heavy conservatory or modern glass box extension making orangeries a better option for positioning fitted kitchen units while still enjoying plenty of sunlight.</h3>
+    <p>Adding a roof lantern to your kitchen conservatory extension will flood your new space with light. A side-return can create valuable wall space for cupboards and worktops. An adjustable wall-hung pivot light adds a modern touch. In a kitchen extension position a dining table where the maximum light falls.</p>
+</article>
+
+<section>
+
+    <aside>
+        <img class="v-image ads-img" alt="Farmhouse Kitchen Extension Conservatory Kitchen Farmhouse Kitchen Decor House Extensions" src="https://i.pinimg.com/originals/1b/c8/ed/1bc8eda1fe7db96c5fb93114970d114f.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrcCpNQ927OuHTIQyVToWNEJFcqnlNan2CPQ';" />
+        <small>Source: www.pinterest.com</small>
+        <p>In this space which lacks conventional windows roof lights bring drama and atmosphere to the table.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Kitchen Extension Homebuilding" src="https://cdn.mos.cms.futurecdn.net/2xtF8RXB7QCyBEhr7XhZij.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShvFJK3C0bDH3im38P-jz9iLSoPMXNeA0OCA';" />
+        <small>Source: www.homebuilding.co.uk</small>
+        <p>In this space which lacks conventional windows roof lights bring drama and atmosphere to the table.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Beautiful Ideas For Kitchen Extensions Loveproperty Com" src="https://loveincorporated.blob.core.windows.net/contentimages/gallery/9744bd14-60c9-43de-8ded-3107bb762a74-velux_green_kit_ext.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHiFRow4epm-WiJKfkw4cu5nptcihX0lxv9Q';" />
+        <small>Source: www.loveproperty.com</small>
+        <p>Timings largely depend on the type and size of the project you are working on but on average building a kitchen could take between three and five months.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Beautiful Ideas For Kitchen Extensions Loveproperty Com" src="https://loveincorporated.blob.core.windows.net/contentimages/gallery/b30ad342-c972-4985-b059-4bbef3bfe0a9-steel_DHVA.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb4EMa6A3KNwVpuQDCsSEhe1819OR8gO7HLQ';" />
+        <small>Source: www.loveproperty.com</small>
+        <p>Planning a realistic kitchen extension timeline can help to visualise the project and make sure every aspect of it is being taken care of to avoid any inconvenience further down the line.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="House Extension Ideas Designs House Extension Photo Gallery Open Plan Kitchen Living Room Open Plan Kitchen Dining Living Kitchen Extension" src="https://i.pinimg.com/originals/47/9e/da/479eda04926e3d28efbbc1abd8595f7a.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsMzco8aB-chOSFIr_z0UwjHpsm5HJxiIF8w';" />
+        <small>Source: www.pinterest.co.uk</small>
+        <p>Kitchen Living Room Extension Design - Temukan file yang kamu cari disini dan mengunduhnya secara gratis.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="A Guide To Kitchen Extensions Herringbone Kitchens" src="https://images.squarespace-cdn.com/content/v1/5358c6dbe4b090d1c9b457db/1542730729917-194MLIUNY3UM7HSCZW3W/ke17ZwdGBToddI8pDm48kHJjM-Evnp5g-1kf5Yv15cUUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcpWKe3KzaCrFDKPR1a1Ob8xobjReaxMuaKtrvUDoDmPO9EsdBHei1w8jR6w0UZiby/South+East+Kitchen+10.jpg?format=1500w" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk870I_wK58QdeMxCfNPhr8HeHbqRijcMWmw';" />
+        <small>Source: www.herringbonekitchens.com</small>
+        <p>For example if you own a terraced house its usually only possible to opt for a rear kitchen extension.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Kitchen Extension Cost What To Expect And How To Budget Real Homes" src="https://cdn.mos.cms.futurecdn.net/d9juJefkWQSiB3UQaYCe8L.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpUHV87r6DPpoSAuQg_dR10SfgzspEJaDoBA';" />
+        <small>Source: www.realhomes.com</small>
+        <p>50 Kitchen Extension Ideas For Semi Detached Houses The nature of your own home.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="15 Classy Kitchen Extension Ideas You Can Steal To Suit Yourself" src="https://www.bespokehomedesign.com/wp-content/uploads/2015/07/09.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHzPEUlqOAP4PVhGb66Dr_jKg5BUd1kzFG1Q';" />
+        <small>Source: www.bespokehomedesign.com</small>
+        <p>A poorly lit kitchen is cold dim and boring.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Kitchen Extensions How To Design Plan And Cost Your Dream Space" src="https://ksassets.timeincuk.net/wp/uploads/sites/56/2017/09/DaleSt-01.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAI-aN4cLTBy1-2XGhcDQXxc75vitZVKd_rw';" />
+        <small>Source: www.idealhome.co.uk</small>
+        <p>Think about how you will use your new space throughout the seasons how to make garden access easy and the best ways to bring in more natural light too.</p>
+    </aside>
+</section>
+<section>
+    <article>
+        <p>
+                                
+                            <a href="/outdoor-kitchen-financing.html"><i>&larr; outdoor kitchen financing</i></a>
+                                                                    
+                                        <a href="/moen-kitchen-sip-faucets.html"><i>moen kitchen sip faucets &rarr;</i></a>
+                                        </p>
+    </article>
+</section>
+		<center>
+			<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+	</center>
+</div>		</center>
+    </main>
+    <footer style="padding-top: 50px;">
+        <center>
+                            <a href="/p/dmca.html">Dmca</a>
+                            <a href="/p/contact.html">Contact</a>
+                            <a href="/p/privacy-policy.html">Privacy Policy</a>
+                            <a href="/p/copyright.html">Copyright</a>
+                    </center>
+    </footer>
+    <!-- Footer CSS JS -->            <script type="text/javascript">
+        var search = document.getElementById("search-box");
+        search.addEventListener("keyup", function(event) {
+            event.preventDefault();
+            if (event.keyCode === 13) {
+                var target = 'site:'+location.host+' '+search.value;
+                var uri= 'https://www.google.com/search?q='+encodeURIComponent(target);
+                window.location= uri;
+            }
+        });
+    </script>
+</body>
+
+</html>
